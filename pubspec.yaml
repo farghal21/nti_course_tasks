@@ -79,6 +79,8 @@ flutter:
     - family: Lexend Deca
       fonts:
         - asset: assets/fonts/Lexend_Deca/LexendDeca-Black.ttf
+        - asset: assets/fonts/Lexend_Deca/LexendDeca-Regular.ttf
+
 
   #
   # For details regarding fonts from package dependencies,

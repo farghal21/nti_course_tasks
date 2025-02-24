@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nti_course_tasks/Categories/buttons.dart';
-import 'package:nti_course_tasks/Categories/edit_task_card.dart';
-import 'package:nti_course_tasks/StyleFolder/taskIcons.dart';
+import 'package:nti_course_tasks/Categories/textformwedgit.dart';
+import 'package:nti_course_tasks/StyleFolder/Colors/taskColors.dart';
+import 'package:nti_course_tasks/StyleFolder/Icons/taskIcons.dart';
 
 class EditTask extends StatelessWidget {
   const EditTask({super.key});
@@ -27,7 +28,7 @@ class EditTask extends StatelessWidget {
             margin: EdgeInsets.only(right: 8),
             child: ElevatedButton.icon(
               onPressed: () {},
-              icon: SvgPicture.asset('assets/icons/delete.svg'),
+              icon: SvgPicture.asset(AppIcons.delete),
               label: Text(
                 "Delete",
                 style: TextStyle(
@@ -38,7 +39,7 @@ class EditTask extends StatelessWidget {
                         'assets/fonts/Lexend_Deca/LexendDeca-Black.ttf'),
               ),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xffE4312B),
+                backgroundColor: Appcolors.editTaskAppBarButtonColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -84,114 +85,32 @@ class EditTask extends StatelessWidget {
                     ],
                   ),
                 ),
-                EditTaskCard(
+                Textformwedgit(
                   title: "Task Group",
-                  subtitle: "Home",
-                  icon: SvgPicture.asset("assets/icons/Home2.svg"),
+                  icon: SvgPicture.asset(AppIcons.home2),
+                  iconBackgroundColor: Appcolors.iconBackgroundColor,
                 ),
-                EditTaskCard(
-                    title: "Task Group", subtitle: "Grocery Shopping App"),
-                EditTaskCard(
+                Textformwedgit(
+                  title: "Task Name",
+                ),
+                Textformwedgit(
                   title: "Description",
-                  subtitle:
-                      "Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products.",
+                  height: 142,
                 ),
-                Container(
-                  margin: EdgeInsets.all(13),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
-                  child: ListTile(
-                    title: Text("Star Date",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 9,
-                            fontFamily:
-                                "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                            color: Color(0xff6E6A7C))),
-                    leading: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
-                        child: SvgPicture.asset("assets/icons/calendar.svg")),
-                    subtitle: Row(
-                      children: [
-                        Text(
-                          "01 May, 2022",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w200,
-                              fontSize: 14,
-                              fontFamily:
-                                  "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                              color: Color(0xff24252C)),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          "10:00 am",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w200,
-                              fontSize: 14,
-                              fontFamily:
-                                  "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                              color: Color(0xff24252C)),
-                        ),
-                      ],
-                    ),
-                  ),
+                Textformwedgit(
+                  title: "Start Date",
+                  icon: SvgPicture.asset(AppIcons.calender),
                 ),
-                Container(
-                  margin: EdgeInsets.all(13),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
-                  child: ListTile(
-                    title: Text("End Date",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 9,
-                            fontFamily:
-                                "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                            color: Color(0xff6E6A7C))),
-                    leading: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
-                        child: SvgPicture.asset("assets/icons/calendar.svg")),
-                    subtitle: Row(
-                      children: [
-                        Text(
-                          "30 June, 2022",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w200,
-                              fontSize: 14,
-                              fontFamily:
-                                  "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                              color: Color(0xff24252C)),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text(
-                          "10:00 am",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w200,
-                              fontSize: 14,
-                              fontFamily:
-                                  "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                              color: Color(0xff24252C)),
-                        ),
-                      ],
-                    ),
-                  ),
+                Textformwedgit(
+                  title: "End Date",
+                  icon: SvgPicture.asset(AppIcons.calender),
                 ),
               ],
             ),
             Buttons(
               adress: 'Mark as Done',
               textColor: Colors.white,
-              backgroundColor: Color(0xff149954),
+              backgroundColor: Appcolors.textFormButtonColor,
               isSelected: true,
               buttonHeight: 52.0001106262207,
               buttonWidth: 331,
@@ -202,13 +121,13 @@ class EditTask extends StatelessWidget {
             ),
             Buttons(
               adress: 'Update',
-              textColor: Color(0xff149954),
-              backgroundColor: Color(0xff149954),
+              textColor: Appcolors.textFormButtonColor,
+              backgroundColor: Appcolors.textFormButtonColor,
               isSelected: false,
               buttonHeight: 52.0001106262207,
               buttonWidth: 331,
               shapeisSelected: true,
-              bordeside: Color(0xff149954),
+              bordeside: Appcolors.textFormButtonColor,
             ),
           ],
         ),

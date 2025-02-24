@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nti_course_tasks/Categories/buttons.dart';
 import 'package:nti_course_tasks/Categories/cards.dart';
-import 'package:nti_course_tasks/StyleFolder/taskIcons.dart';
+import 'package:nti_course_tasks/StyleFolder/Icons/taskIcons.dart';
 
 class TodayTask extends StatelessWidget {
   const TodayTask({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nti_course_tasks/StyleFolder/taskColors.dart';
+import 'package:nti_course_tasks/StyleFolder/Colors/taskColors.dart';
 
 class Buttons extends StatelessWidget {
   final String adress;
@@ -16,7 +16,7 @@ class Buttons extends StatelessWidget {
     required this.adress,
     required this.textColor,
     this.isSelected = false,
-    this.backgroundColor = Taskcolors.appColor,
+    this.backgroundColor = Appcolors.appColor,
     this.buttonWidth = 70,
     this.buttonHeight = 28,
     this.shapeisSelected = false,
@@ -37,7 +37,7 @@ class Buttons extends StatelessWidget {
                 : BorderSide(width: .5, color: bordeside),
             elevation: shapeisSelected ? 10 : 0,
             backgroundColor:
-                isSelected ? Color(0xff149954) : Taskcolors.appColor,
+                isSelected ? Color(0xff149954) : Appcolors.appColor,
             minimumSize: Size(buttonWidth, buttonHeight)),
         onPressed: () {},
         child: Text(
