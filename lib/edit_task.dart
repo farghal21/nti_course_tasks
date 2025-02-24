@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nti_course_tasks/Categories/buttons.dart';
+import 'package:nti_course_tasks/Categories/edit_task_card.dart';
 import 'package:nti_course_tasks/StyleFolder/taskIcons.dart';
 
 class EditTask extends StatelessWidget {
@@ -83,87 +84,17 @@ class EditTask extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  //height: 63,
-                  //width: 331,
-                  margin: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
-                  child: ListTile(
-                    leading: Container(
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            color: Color(0xffFFE4F2),
-                            borderRadius: BorderRadius.all(Radius.circular(5))),
-                        child: SvgPicture.asset("assets/icons/Home2.svg")),
-                    title: Text("Task Group",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 9,
-                            fontFamily:
-                                "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                            color: Color(0xff6E6A7C))),
-                    subtitle: Text(
-                      "Home",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w200,
-                          fontSize: 14,
-                          fontFamily:
-                              "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                          color: Color(0xff24252C)),
-                    ),
-                  ),
+                EditTaskCard(
+                  title: "Task Group",
+                  subtitle: "Home",
+                  icon: SvgPicture.asset("assets/icons/Home2.svg"),
                 ),
-                Container(
-                  //height: 63,
-                  //width: 331,
-                  margin: EdgeInsets.all(13),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
-                  child: ListTile(
-                    title: Text("Task Group",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 9,
-                            fontFamily:
-                                "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                            color: Color(0xff6E6A7C))),
-                    subtitle: Text(
-                      "Grocery Shopping App",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w200,
-                          fontSize: 14,
-                          fontFamily:
-                              "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                          color: Color(0xff24252C)),
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.all(13),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(15))),
-                  child: ListTile(
-                    title: Text("Description",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 9,
-                            fontFamily:
-                                "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                            color: Color(0xff6E6A7C))),
-                    subtitle: Text(
+                EditTaskCard(
+                    title: "Task Group", subtitle: "Grocery Shopping App"),
+                EditTaskCard(
+                  title: "Description",
+                  subtitle:
                       "Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products. Go for grocery to buy some products.",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w200,
-                          fontSize: 14,
-                          fontFamily:
-                              "assets/fonts/Lexend_Deca/LexendDeca-Black.ttf",
-                          color: Color(0xff24252C)),
-                    ),
-                  ),
                 ),
                 Container(
                   margin: EdgeInsets.all(13),
