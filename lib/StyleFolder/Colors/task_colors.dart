@@ -6,4 +6,5 @@ abstract class Appcolors {
   static const Color textFormTitleColor = Color(0xff6E6A7C);
   static const Color textFormButtonColor = Color(0xff149954);
   static const Color editTaskAppBarButtonColor = Color(0xffE4312B);
+  static const Color dropdownTextColor = Color(0xff24252C);
 }

@@ -14,8 +14,16 @@ class ProfileCard extends StatelessWidget {
         margin: EdgeInsets.all(15),
         padding: EdgeInsets.all(5),
         decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(15))),
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(15)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              blurRadius: 5,
+              offset: Offset(0, 3),
+            ),
+          ],
+        ),
         child: Row(
           children: [
             icon,
