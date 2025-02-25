@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nti_course_tasks/Categories/profile_card.dart';
 import 'package:nti_course_tasks/StyleFolder/Colors/task_colors.dart';
 import 'package:nti_course_tasks/StyleFolder/Icons/taskIcons.dart';
+import 'package:nti_course_tasks/StyleFolder/Images/taskImages.dart';
 
 class ProfileTask extends StatelessWidget {
   const ProfileTask({super.key});
@@ -17,12 +18,12 @@ class ProfileTask extends StatelessWidget {
               width: 375,
               height: 277,
               child: Image.asset(
-                "assets/images/palestineimage.png",
+                AppImages.palestineImage,
                 fit: BoxFit.cover,
               )),
           ProfileCard(
               title: "Update Profile",
-              icon: SvgPicture.asset(AppIcons.profileperson)),
+              icon: Image.asset(AppImages.personProfuleImage)),
           ProfileCard(
             title: "History",
             icon: SvgPicture.asset(AppIcons.history),
@@ -60,7 +61,11 @@ class ProfileTask extends StatelessWidget {
                     value: options,
                     child: Row(
                       children: [
-                        SvgPicture.asset(AppIcons.palestineicon),
+                        CircleAvatar(
+                            child: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: AssetImage(AppImages.palestineImage),
+                        )),
                         SizedBox(width: 10),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
