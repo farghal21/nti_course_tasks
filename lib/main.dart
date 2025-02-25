@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nti_course_tasks/StyleFolder/Colors/taskColors.dart';
-import 'package:nti_course_tasks/edit_task.dart';
+import 'package:nti_course_tasks/AppScreens/profile_task.dart';
+import 'package:nti_course_tasks/StyleFolder/Colors/task_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Appcolors.appColor,
           appBarTheme: AppBarTheme(backgroundColor: Appcolors.appColor)),
       debugShowCheckedModeBanner: false,
-      home: EditTask(),
+      home: ProfileTask(),
     );
   }
 }

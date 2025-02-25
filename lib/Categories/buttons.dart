@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nti_course_tasks/StyleFolder/Colors/taskColors.dart';
+import 'package:nti_course_tasks/StyleFolder/Colors/task_colors.dart';
 
 class Buttons extends StatelessWidget {
   final String adress;

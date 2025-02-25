@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nti_course_tasks/Categories/buttons.dart';
 import 'package:nti_course_tasks/Categories/textformwedgit.dart';
-import 'package:nti_course_tasks/StyleFolder/Colors/taskColors.dart';
+import 'package:nti_course_tasks/StyleFolder/Colors/task_colors.dart';
 import 'package:nti_course_tasks/StyleFolder/Icons/taskIcons.dart';
 
 class EditTask extends StatelessWidget {
